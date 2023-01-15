@@ -1,0 +1,88 @@
+.team-section {
+  padding-bottom: 94px;
+  padding-top: 94px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: $secondary-bc-color;
+}
+
+.team-section__heading {
+  padding-bottom: 50px;
+  color: $title-text-color;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+}
+
+.team-setion__members-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.member-card {
+  background-color: $main-bc-color;
+  flex-basis: calc(100% - 90px / 4);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.member-card__image {
+  padding-bottom: 30px;
+  display: block;
+  width: 270px;
+  height: 260px;
+}
+
+.member-card__name {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: $title-text-color;
+}
+
+.member-card__position {
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+.member-card__social-net-links-list {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.member-card__list-item {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.member-card__link {
+  display: inline-block;
+  padding: 12px;
+  color: $social-net-link-color;
+  background-color: $white-text-color;
+  transition: background-color $anim-func $anim-time;
+  transition: color $anim-func $anim-time;
+
+  &:hover,
+  &:focus {
+    background-color: $active-color;
+    color: $white-text-color;
+  }
+}
+
+.member-card__social-net-icon {
+  fill: currentColor;
+}

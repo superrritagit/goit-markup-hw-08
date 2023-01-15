@@ -1,0 +1,21 @@
+$title-text-color: #212121;
+$active-color: #2196f3;
+$text-color: #757575;
+$foo-contacts-color: rgba(255, 255, 255, 0.6);
+$white-text-color: #ffffff;
+$main-bc-color: #ffffff;
+$secondary-bc-color: #f5f4fa;
+$nav-logo-color: #000000;
+$filter-button-color: #f5f4fa;
+$foo-bc-color: #2f303a;
+$secondary-active-color: #188ce8;
+$social-net-link-color: #afb1b8;
+$anim-time: 250ms;
+$anim-func: cubic-bezier(0.4, 0, 0.2, 1);
+
+body {
+    background-color: $main-bc-color;
+    font-family: 'Roboto', sans-serif;
+    color: $text-color;
+}
+

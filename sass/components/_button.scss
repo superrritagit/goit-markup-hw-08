@@ -1,0 +1,9 @@
+%button {
+  background-color: $active-color;
+  color: $white-text-color;
+  border: none;
+  font-family: inherit;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color $anim-func $anim-time, color $anim-func $anim-time;
+}

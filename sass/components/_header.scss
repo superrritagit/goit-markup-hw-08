@@ -1,0 +1,125 @@
+.page-header {
+  border-bottom: 1px solid #ececec;
+  display: flex;
+  align-items: center;
+}
+
+.page-header__logo {
+  color: $nav-logo-color;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  @media screen and (min-width: 768px) {
+    margin-right: 87px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 91px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+}
+
+.page-header__content {
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 767px) {
+    justify-content: space-between;
+  }
+}
+
+.desktop-menu {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  display: flex;
+  align-items: center;
+}
+
+.nav-bar {
+  @media screen and (min-width: 768px) {
+    margin-right: 90px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 315px;
+  }
+}
+
+.nav-bar__list {
+  display: flex;
+  gap: 50px;
+}
+
+.page-header__contacts-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    gap: 30px;
+  }
+}
+
+.nav-bar__link {
+  display: block;
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+  color: $title-text-color;
+  transition: color $anim-func $anim-time;
+
+  &:hover,
+  &:focus,
+  &--current {
+    color: $active-color;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: $active-color;
+    transform: scaleX(0);
+    transition: transform $anim-func $anim-time;
+  }
+
+  &:hover::after,
+  &:focus::after,
+  &--current::after {
+    transform: scaleX(1);
+  }
+}
+
+.page-header__contact-link {
+  display: flex;
+  align-items: center;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.02em;
+  color: $text-color;
+  transition: color $anim-func $anim-time;
+
+  &:hover,
+  &:focus {
+    color: $active-color;
+  }
+}
+
+.page-header__contact-icon {
+  fill: currentColor;
+  margin-right: 8px;
+}

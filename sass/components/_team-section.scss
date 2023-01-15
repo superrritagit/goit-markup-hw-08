@@ -1,0 +1,110 @@
+.team-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin: 0 auto;
+  background-color: $secondary-bc-color;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.team-section__heading {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: calc(33 / 28);
+  letter-spacing: 0.03em;
+  color: $title-text-color;
+}
+.team-setion__members-list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+}
+
+.member-card {
+  background-color: $main-bc-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  padding-bottom: 24px;
+
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+}
+
+.member-card__image {
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.member-card__name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(19 / 16);
+  letter-spacing: 0.03em;
+  color: $title-text-color;
+  margin-bottom: 10px;
+}
+
+.member-card__position {
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(16 / 19);
+  letter-spacing: 0.03em;
+  color: $text-color;
+}
+
+.member-card__social-net-links-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.member-card__list-item {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.member-card__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: $social-net-link-color;
+  transition: background-color $anim-func $anim-time;
+  transition: color $anim-func $anim-time;
+
+  &:hover,
+  &:focus {
+    background-color: $active-color;
+    color: $white-text-color;
+  }
+}
+
+.member-card__social-net-icon {
+  fill: currentColor;
+}

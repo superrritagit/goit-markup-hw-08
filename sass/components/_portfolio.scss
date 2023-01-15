@@ -1,0 +1,102 @@
+.portfolio-content {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.portfolio-section {
+}
+.portfolio-section__heading {
+  @extend .visually-hidden;
+}
+
+.fielter-group__list {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding-bottom: 50px;
+}
+.fielter-group__list-item {
+}
+.fielter-section__button {
+  @extend %button;
+  padding: 6px 22px;
+  color: $title-text-color;
+  background-color: $secondary-bc-color;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+
+  &:hover,
+  &:focus,
+  &--chosen {
+    color: $white-text-color;
+    background-color: $active-color;
+  }
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.portfolio-list__item {
+  flex-basis: calc((100% - 60px) / 3);
+}
+.portfolio-list__link {
+  display: inline-block;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+.portfolio-list__image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-list__project-image {
+  display: block;
+}
+.portfolio-list__project-description {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  transform: translateY(101%);
+  transition: transform $anim-func $anim-time;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: $white-text-color;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  .portfolio-list__link:hover & {
+    transform: translateY(0);
+  }
+}
+
+.portfolio-list__card-title {
+  padding: 20px 24px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+}
+
+.portfolio-list__project-name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: $title-text-color;
+}
+.portfolio-list__project-type {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  color: $text-color;
+}
